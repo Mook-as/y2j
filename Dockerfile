@@ -14,7 +14,7 @@ RUN true \
     && echo $PATH \
     && go get github.com/echojc/y2j \
     && apk del -r libc6-compat git tar wget \
-    && rm -r /opt /lib64 /go /tmp/go.tgz \
+    && rm -r /opt /lib64 /go /tmp/go.tgz /var/cache/apk/* \
     && true
 
 ENTRYPOINT []

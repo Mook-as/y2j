@@ -18,5 +18,6 @@ RUN true \
     && true
 
 ENTRYPOINT []
+ENV DESTDIR=/usr/local/bin/
 # We do a `sleep 1` to make sure we give enough time for `docker cp` to start
-CMD echo docker cp $(hostname):/usr/local/bin/y2j /usr/local/bin/ ; sleep 1
+CMD echo docker cp $(hostname):/usr/local/bin/y2j ${DESTDIR} ; sleep 1
